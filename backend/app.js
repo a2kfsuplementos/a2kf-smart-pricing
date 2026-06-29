@@ -4,6 +4,10 @@ const healthRoute = require("./routes/health");
 
 const app = express();
 
+const databaseRoute = require("./routes/database");
+
+app.use("/api/database", databaseRoute);
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
