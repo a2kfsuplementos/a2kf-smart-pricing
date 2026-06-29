@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 
+// O Render define a variável PORT automaticamente
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
@@ -16,6 +17,6 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
